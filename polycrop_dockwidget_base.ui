@@ -24,6 +24,9 @@
     </item>
     <item>
      <widget class="QgsMapLayerComboBox" name="mMapLayerComboBox">
+      <property name="toolTip">
+       <string>Selecciona la capa de líneas sobre las cuales se dibujará el policultivo</string>
+      </property>
      </widget>
     </item>
     <item>
@@ -76,15 +79,41 @@
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
        <widget class="QPushButton" name="btnAdd">
+        <property name="toolTip">
+         <string>Añade una nueva fila al final del patrón</string>
+        </property>
         <property name="text">
          <string>Añadir</string>
         </property>
        </widget>
       </item>
       <item>
+       <widget class="QPushButton" name="btnDuplicate">
+        <property name="toolTip">
+         <string>Duplica la fila seleccionada y la inserta debajo</string>
+        </property>
+        <property name="text">
+         <string>Duplicar</string>
+        </property>
+       </widget>
+      </item>
+      <item>
        <widget class="QPushButton" name="btnRemove">
+        <property name="toolTip">
+         <string>Elimina las filas seleccionadas del patrón</string>
+        </property>
         <property name="text">
          <string>Quitar</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnClear">
+        <property name="toolTip">
+         <string>Borra todas las filas del patrón para empezar desde cero</string>
+        </property>
+        <property name="text">
+         <string>Limpiar Todo</string>
         </property>
        </widget>
       </item>
@@ -92,6 +121,9 @@
     </item>
     <item>
      <widget class="QCheckBox" name="chkReverse">
+      <property name="toolTip">
+       <string>Cambia el punto de inicio de la línea al lado opuesto</string>
+      </property>
       <property name="text">
        <string>Invertir dirección de la línea</string>
       </property>
@@ -99,8 +131,52 @@
     </item>
     <item>
      <widget class="QCheckBox" name="chkRestart">
+      <property name="toolTip">
+       <string>El patrón volverá a empezar desde el primer cultivo en cada nueva línea</string>
+      </property>
       <property name="text">
        <string>Reiniciar patrón por cada línea</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QRadioButton" name="radCreateNew">
+        <property name="text">
+         <string>Crear capa:</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="txtLayerName">
+        <property name="text">
+         <string>Policultivo_Generado</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QRadioButton" name="radUpdateExisting">
+      <property name="toolTip">
+       <string>Actualiza los puntos de la capa seleccionada (solo borra y redibuja en los surcos seleccionados)</string>
+      </property>
+      <property name="text">
+       <string>Actualizar capa (Borrado selectivo)</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QgsMapLayerComboBox" name="mTargetLayerComboBox">
+      <property name="toolTip">
+       <string>Selecciona la capa de puntos que deseas actualizar</string>
+      </property>
+      <property name="enabled">
+       <bool>false</bool>
       </property>
      </widget>
     </item>
@@ -108,6 +184,22 @@
      <widget class="QPushButton" name="btnGenerate">
       <property name="text">
        <string>Generar Policultivo</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTextBrowser" name="txtSummary">
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+      <property name="maximumHeight">
+       <number>150</number>
+      </property>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;/head&gt;&lt;body&gt;
+&lt;p&gt;&lt;span style=&quot; color:#888888;&quot;&gt;El resumen aparecerá aquí...&lt;/span&gt;&lt;/p&gt;
+&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
     </item>
