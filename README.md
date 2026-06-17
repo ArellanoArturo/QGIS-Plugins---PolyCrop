@@ -2,6 +2,8 @@
 
 PolyCrop es un complemento (plugin) para QGIS diseñado para facilitar la implementación de sistemas de policultivos y agroforestería, optimizando el espacio y adaptándose de manera automática a líneas topográficas (como curvas de nivel o keylines).
 
+![PolyCrop Example](PolyCrop_First_example.png)
+
 ## Características Principales
 
 - **Diseño Secuencial:** Crea secuencias personalizadas de múltiples cultivos con distintas distancias y cantidades.
