@@ -1,0 +1,12 @@
+[general]
+name=PolyCrop
+qgisMinimumVersion=3.0
+description=Genera patrones de policultivos sobre líneas topográficas con espaciados dinámicos.
+version=1.0
+author=Antigravity
+email=admin@example.com
+about=Un plugin para diseñar sistemas agroforestales y policultivos sobre líneas de nivel.
+tracker=
+repository=
+category=Vector
+icon=icon.svg
